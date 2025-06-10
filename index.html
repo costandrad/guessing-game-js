@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Cálculo Volume I (Apostol) - Resolução de Livros</title>
+    <title>Jogo de Adivinhação - Outros Projetos</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 
@@ -125,8 +125,7 @@
           <div class="container">
             <div class="row d-flex justify-content-center text-center">
               <div class="col-lg-8">
-                <h1 class="heading-title">Título do Livro</h1>
-                <h4>Autor</h4>
+                <h1 class="heading-title">Jogo de Adivinhação</h1>
               </div>
             </div>
           </div>
@@ -140,71 +139,29 @@
           <div class="row justify-content-between gy-4">
             <div class="col-lg-7" data-aos="fade-up">
               <div class="portfolio-description">
-                <h2>Descrição do Projeto</h2>
+                <h2>Tente adivinhar o número</h2>
                 <p>
-                  Bem-vindo à página dedicada à resolução detalhada e comentada
-                  dos problemas do livro <em>Título do Livro</em> de Autor. Aqui, você encontrará soluções analíticas passo a
-                  passo para os exercícios propostos, com explicações claras e
-                  insights sobre os conceitos matemáticos envolvidos.
+                  Pensei em um número inteiro entre 1 e 100. Tente adivinhar!!
                 </p>
 
-                <p>
-                  <strong>Observação:</strong> Esta é uma iniciativa
-                  independente e não está associada ao autor ou à editora do
-                  livro.
-                </p>
+                <button class="btn btn-primary my-3" id="botao-novo-jogo">Novo Jogo</button>
 
-                <h3>Objetivo</h3>
-                <p>
-                  Auxiliar estudantes e entusiastas de matemática a compreender
-                  profundamente os fundamentos do cálculo, oferecendo não apenas
-                  respostas, mas também o raciocínio por trás delas.
-                </p>
+                <div id="alert-msg"></div>
 
-                <h3>Sobre as Soluções</h3>
-                <ul>
-                  <li>
-                    <strong>Abordagem Analítica:</strong> Priorizamos métodos
-                    tradicionais de cálculo e análise matemática, seguindo o
-                    rigor do livro.
-                  </li>
-                  <li>
-                    <strong>Métodos Computacionais (Python/R):</strong> Em casos
-                    específicos (como problemas numéricos, visualizações ou
-                    verificações), utilizamos Python para complementar a
-                    solução. O código-fonte será disponibilizado para
-                    referência.
-                  </li>
-                  <li>
-                    <strong>Organização:</strong> As soluções estão divididas
-                    por capítulo e seção, facilitando a navegação.
-                  </li>
-                </ul>
+                <form action="#" class="text-center my-3 p-3 bg-light rounded shadow">
+                  <div class="form-group">
+                    <input  class="form-control" 
+                            id="numero-palpite"
+                            type="number"
+                            min="1"
+                            max="100"
+                            placeholder="Digite um número entre 1 e 100">
+                  </div>
+                  <button class="btn btn-success mt-2" id="botao-enviar">Enviar Palpite</button>
+                </form>
 
-                <h3 class="">Arquivos do projeto</h3>
-
-                <ul>
-                  <li class="d-flex align-items-start gap-2">
-                    <i class="bi bi-check-circle"></i>
-                    <ul class="px-1">
-                      <li>
-                        <a href="output/template_using_python.pdf" target="_blank"
-                          >Template usando Python</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="d-flex align-items-start gap-2">
-                    <i class="bi bi-check-circle"></i>
-                    <ul class="px-1">
-                      <li>
-                        <a href="output/template_using_r.pdf" target="_blank"
-                          >Template usando R</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
+                <h6 id="tentativas-header">Suas tentativas</h6>
+                <div id="tentativas-output"></div>
               </div>
             </div>
 
@@ -232,13 +189,10 @@
                   </script>
                   <div class="swiper-wrapper align-items-center">
                     <div class="swiper-slide" style="text-align: center; background-color: #f4f4f9">
-                      <img src="assets/img/cover.png" alt="" style="width: auto; height: 250px"/>
+                      <img src="assets/img/guess-01.png" alt="" style="width: auto; height: 250px"/>
                     </div>
                     <div class="swiper-slide" style="text-align: center; background-color: #f4f4f9">
-                      <img src="assets/img/cover.png" alt="" style="width: auto; height: 250px"/>
-                    </div>
-                    <div class="swiper-slide" style="text-align: center; background-color: #f4f4f9">
-                      <img src="assets/img/cover.png" alt="" style="width: auto; height: 250px"/>
+                      <img src="assets/img/guess-02.png" alt="" style="width: auto; height: 250px"/>
                     </div>
                   </div>
                   <div class="swiper-button-prev"></div>
@@ -251,7 +205,7 @@
                 <div class="portfolio-info">
                   <h3>Informações do projeto</h3>
                   <ul>
-                    <li><strong>Categoria</strong> Categoria</li>
+                    <li><strong>Categoria</strong> Web</li>
                     <li>
                       <strong>Repositório</strong>
                       <a
@@ -316,5 +270,6 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/guess.js"></script>
   </body>
 </html>
